@@ -1,2 +1,3 @@
-# rusticate
-image dithering in Rust
+# Rusticate
+
+Simple Floyd–Steinberg dithering in Rust.
