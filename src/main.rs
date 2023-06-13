@@ -57,7 +57,6 @@ pub fn dither_image(image: &mut GrayImage) {
 
 fn main() {
     let opt: Opt = Opt::from_args();
-    println!("{:?} {:?}", opt.input, opt.output);
     let img = image::open(opt.input).expect("File not found!");
     let mut luma_img = img.into_luma8();
     dither_image(&mut luma_img);
