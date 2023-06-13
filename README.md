@@ -18,6 +18,14 @@ This will read `input.jpg`, perform grayscale dithering, and write the result to
 
 If you omit the `--grayscale` flag, the program will perform color dithering.
 
+## Examples
+
+Image from [Kenai Fjords National Park](https://www.flickr.com/photos/89251484@N06/8204079962).
+
+![grayscale](examples/1bit_bw.png)
+
+![color](examples/1bit_color.png)
+
 ## Dependencies
 
 This project depends on the `image` and `structopt` crates.
