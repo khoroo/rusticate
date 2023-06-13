@@ -14,7 +14,7 @@ struct Opt {
 
     /// Perform dithering in grayscale or color. If true, perform in grayscale. If false, perform in color.
     #[structopt(long)]
-    bw: bool,
+    grayscale: bool,
 }
 
 fn find_nearest_1bit_grayscale(oldpixel: u8) -> u8 {
@@ -115,7 +115,7 @@ fn main() {
     let opt: Opt = Opt::from_args();
     let img = image::open(opt.input).expect("File not found!");
 
-    if opt.bw {
+    if opt.grayscale {
         let mut luma_img: image::ImageBuffer<Luma<u8>, _> = img.into_luma8();
         dither_grayscale_image(&mut luma_img);
         luma_img.save(opt.output).expect("Failed to save!");
